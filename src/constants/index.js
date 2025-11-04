@@ -165,7 +165,7 @@ const expCards = [
       "From January 2023 to December 2024, I dived deep into Web Development. I learned how to build modern, responsive websites and full-stack applications, bringing my creative and technical ideas to life.",
     imgPath: "/images/exp6.png",
     logoPath: "/images/logo5.png",
-    title: "Web Developer",
+    title: "Web Development",
     date: "January 2023 - December 2024",
     responsibilities: [
       "Mastered HTML, CSS, JavaScript, and frameworks like React, Node.js, and Express.",
@@ -178,7 +178,7 @@ const expCards = [
       "In March 2025, I started my journey into Artificial Intelligence and Machine Learning. I’m currently learning and exploring algorithms, models, and real-world applications to combine my development experience with AI innovation.",
     imgPath: "/images/exp7.png",
     logoPath: "/images/logo4.png",
-    title: "AI / ML Learner",
+    title: "AI / ML",
     date: "March 2025 - Present",
     responsibilities: [
       "Learning machine learning algorithms, model training, and data preprocessing.",

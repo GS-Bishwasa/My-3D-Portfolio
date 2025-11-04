@@ -15,6 +15,7 @@ import Footer from './sections/Footer';
 import Lenis from 'lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ScrollMarqueeAnother from './components/ScrollMarqueeAnother';
+import ThingsGoodAt from './components/ThingsGoodAt';
 
 
 
@@ -204,6 +205,7 @@ const App = () => {
             <FeatureCards />
             <ExperienceSection />
             <TechStack />
+            <ThingsGoodAt />
             <Contact />
             {/* <ZoomSection /> */}
             
