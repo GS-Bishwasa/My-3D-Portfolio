@@ -5,9 +5,13 @@ import HeroExperience from '../components/HeoModels/HeroExperience'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import AnimatedCounter from '../components/AnimatedCounter'
+import { useMediaQuery } from 'react-responsive';
 
 
 const Hero = () => {
+
+      const isDesktop = useMediaQuery({ minWidth: 1024 });
+    
     useGSAP(() => {
     // Longer delay to wait for 3D model
     const tl = gsap.timeline({ 
@@ -79,11 +83,14 @@ const Hero = () => {
 
 
                 {/* RIGHT: 3D MODEL */}
-                <figure>
+                {isDesktop && (
+            <figure>
                     <div className='hero-3d-layout'>
                         <HeroExperience />
                     </div>
                 </figure>
+          )}
+                
             </div>
 
 

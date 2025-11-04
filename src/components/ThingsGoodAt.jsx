@@ -182,9 +182,9 @@ const ThingsGoodAt = () => {
   return (
    <section
       ref={sectionRef}
-      className="min-h-screen text-white py-20 px-8"
+      className="min-h-screen text-white py-20 px-8 z-10"
     >
-      <div className="max-w-6xl mx-20">
+      <div className="max-w-6xl md:mx-20 mx-1">
         {/* Title */}
         <h2
           ref={titleRef}

@@ -3,9 +3,13 @@ import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/Contact/ContactExperience";
+import { useMediaQuery } from 'react-responsive';
 
 
 const Contact = () => {
+
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
+
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
@@ -58,7 +62,7 @@ Get in Touch – <span className="text-[#F6BA53]">Let’s</span> Connect
     </div>
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10">
+            <div className="flex-center card-border rounded-xl md:p-10 p-1">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
@@ -117,11 +121,13 @@ Get in Touch – <span className="text-[#F6BA53]">Let’s</span> Connect
               </form>
             </div>
           </div>
-          <div className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-              <ContactExperience />
+          {isDesktop && (
+            <div className="xl:col-span-7 min-h-96">
+              <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
+                <ContactExperience />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>
