@@ -16,6 +16,7 @@ import Lenis from 'lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ScrollMarqueeAnother from './components/ScrollMarqueeAnother';
 import ThingsGoodAt from './components/ThingsGoodAt';
+import { useMediaQuery } from 'react-responsive';
 
 
 
@@ -101,7 +102,7 @@ const PageLoader = ({ onLoadingComplete }) => {
 
   return (
     <div className="loader-container fixed inset-0 z-50 flex items-center justify-center bg-black">
-      
+
       <div className="flex flex-col items-center gap-8">
         {/* Counter */}
         <div className="loader-counter text-[120px] md:text-[180px] font-bold text-white tracking-wider leading-none">
@@ -121,34 +122,35 @@ const PageLoader = ({ onLoadingComplete }) => {
 };
 
 const App = () => {
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-  const cursor = document.getElementById("cursor");
+    const cursor = document.getElementById("cursor");
 
-  // Hide if not found
-  if (!cursor) return;
+    // Hide if not found
+    if (!cursor) return;
 
-  // Default GSAP animation values
-  gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+    // Default GSAP animation values
+    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
 
-  // Update cursor position on mouse move
-  const moveCursor = (e) => {
-    gsap.to(cursor, {
-      x: e.clientX,
-      y: e.clientY,
-      duration: 0.2,
-      ease: "power2.out"
-    });
-  };
+    // Update cursor position on mouse move
+    const moveCursor = (e) => {
+      gsap.to(cursor, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.2,
+        ease: "power2.out"
+      });
+    };
 
-  window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("mousemove", moveCursor);
 
-  return () => {
-    window.removeEventListener("mousemove", moveCursor);
-  };
-}, []);
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+    };
+  }, []);
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
@@ -182,7 +184,9 @@ const App = () => {
 
   return (
     <div id='main'>
-      <div id='cursor'></div>
+      {isDesktop && (
+        <div id='cursor'></div>
+      )}
       {/* Loader */}
       {isLoading && <PageLoader onLoadingComplete={handleLoadingComplete} />}
 
@@ -208,7 +212,7 @@ const App = () => {
             <ThingsGoodAt />
             <Contact />
             {/* <ZoomSection /> */}
-            
+
             <Footer />
           </div>
         </>
