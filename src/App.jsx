@@ -17,7 +17,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ScrollMarqueeAnother from './components/ScrollMarqueeAnother';
 import ThingsGoodAt from './components/ThingsGoodAt';
 import { useMediaQuery } from 'react-responsive';
-
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -184,6 +184,7 @@ const App = () => {
 
   return (
     <div id='main'>
+       <ToastContainer />
       {isDesktop && (
         <div id='cursor'></div>
       )}

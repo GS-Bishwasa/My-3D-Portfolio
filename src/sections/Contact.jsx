@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/Contact/ContactExperience";
 import { useMediaQuery } from 'react-responsive';
+import { toast } from "react-toastify";
 
 
 const Contact = () => {
@@ -37,8 +38,9 @@ const Contact = () => {
 
       // Reset form and stop loading
       setForm({ name: "", email: "", message: "" });
+      toast.success("Email Send Successfully")
     } catch (error) {
-      console.error("EmailJS Error:", error); // Optional: show toast
+      toast.error("There is some problem in sending main, Please try again later"); // Optional: show toast
     } finally {
       setLoading(false); // Always stop loading, even on error
     }
