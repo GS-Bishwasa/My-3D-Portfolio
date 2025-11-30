@@ -19,6 +19,7 @@ const ThingsGoodAt = () => {
     { name: 'HTML', icon: '/images/skills/html.webp' },
     { name: 'CSS', icon: '/images/skills/css.webp' },
     { name: 'JavaScript', icon: '/images/skills/js.webp' },
+    { name: 'Typescript', icon: '/images/skills/ts.svg' },
     { name: 'MongoDB', icon: '/images/skills/mongodb.webp' },
     { name: 'Mongoose', icon: '/images/skills/mongoose.png' },
     { name: 'Express', icon: '/images/skills/express.png' },

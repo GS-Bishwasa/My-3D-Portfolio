@@ -126,6 +126,30 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
+ useEffect(() => {
+    // Disable Right Click
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+    // Disable F12
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "F12") {
+        e.preventDefault();
+      }
+      // Disable Ctrl+Shift+I
+      if (e.ctrlKey && e.shiftKey && e.key === "I") {
+        e.preventDefault();
+      }
+      // Disable Ctrl+Shift+J
+      if (e.ctrlKey && e.shiftKey && e.key === "J") {
+        e.preventDefault();
+      }
+      // Disable Ctrl+U (view source)
+      if (e.ctrlKey && e.key === "U") {
+        e.preventDefault();
+      }
+    });
+  }, []);
+
   useEffect(() => {
     const cursor = document.getElementById("cursor");
 

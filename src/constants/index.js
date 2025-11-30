@@ -149,11 +149,11 @@ const techStackIcons = [
 const expCards = [
   {
     review:
-      "I began my programming journey with C++ in April 2022, just after completing my Class 12 final exams. This phase built my logical thinking and problem-solving foundation, shaping the base of my development journey.",
+      "I began my programming journey with C++ in April 2023, just after completing my Class 12 final exams. This phase built my logical thinking and problem-solving foundation, shaping the base of my development journey.",
     imgPath: "/images/exp4.png",
     logoPath: "/images/logo6.png",
     title: "C++ Programming",
-    date: "April 2022 - December 2022",
+    date: "April 2023 - December 2023",
     responsibilities: [
       "Learned the fundamentals of programming, data types, loops, and functions using C++.",
       "Solved multiple DSA problems to strengthen logical reasoning and algorithmic skills.",
@@ -162,15 +162,15 @@ const expCards = [
   },
   {
     review:
-      "From January 2023 to December 2024, I dived deep into Web Development. I learned how to build modern, responsive websites and full-stack applications, bringing my creative and technical ideas to life.",
+      "From January 2024 to March 2025, I dived deep into Web Development. I learned how to build modern, responsive websites and full-stack applications, bringing my creative and technical ideas to life.",
     imgPath: "/images/exp6.png",
     logoPath: "/images/logo5.png",
     title: "Web Development",
-    date: "January 2023 - December 2024",
+    date: "January 2024 - March 2025",
     responsibilities: [
       "Mastered HTML, CSS, JavaScript, and frameworks like React, Node.js, and Express.",
       "Built multiple responsive and dynamic web projects to enhance frontend and backend skills.",
-      "Explored UI/UX principles, API integration, and deployment using platforms like Vercel.",
+      "Explored UI/UX basics, API integration, and deployment using platforms like Vercel.",
     ],
   },
   {
