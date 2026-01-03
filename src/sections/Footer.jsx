@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className='footer'>
             <div className="footer-container">
                 <div className='flex flex-col justify-center items-center md:items-start'>
-                    <a href="">made with ❤️ by me.</a>
+                    <a href="#">made with ❤️ by me.</a>
                 </div>
                 <div className="socials">
                     {socialImgs.map((img) => (
@@ -16,11 +16,11 @@ const Footer = () => {
                     ))}
                 </div>
 
-<div className='flex flex-col justify-center'>
-<p className='text-center md:text-end'>
-    &copy; {new Date().getFullYear()} GSB | Bishwasa. All rights reserved.
-</p>
-</div>
+                <div className='flex flex-col justify-center'>
+                    <p className='text-center md:text-end'>
+                        &copy; {new Date().getFullYear()} GSB | Bishwasa. All rights reserved.
+                    </p>
+                </div>
 
             </div>
         </footer>
