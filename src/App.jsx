@@ -8,13 +8,11 @@ import LogoSection from './sections/LogoSection';
 import FeatureCards from './sections/FeatureCards';
 import ExperienceSection from './sections/ExperienceSection';
 import Contact from './sections/Contact';
-import ScrollMarquee from './components/ScrollMarquee';
-import ZoomSection from './sections/ZoomSection';
 import Footer from './sections/Footer';
 import Lenis from 'lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ScrollMarqueeAnother from './components/ScrollMarqueeAnother';
-import ThingsGoodAt from './components/ThingsGoodAt';
+import ThingsGoodAt from './sections/ThingsGoodAt';
 import { useMediaQuery } from 'react-responsive';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -125,29 +123,29 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
- useEffect(() => {
-    // Disable Right Click
-    document.addEventListener("contextmenu", (e) => e.preventDefault());
+//  useEffect(() => {
+//     // Disable Right Click
+//     document.addEventListener("contextmenu", (e) => e.preventDefault());
 
-    // Disable F12
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "F12") {
-        e.preventDefault();
-      }
-      // Disable Ctrl+Shift+I
-      if (e.ctrlKey && e.shiftKey && e.key === "I") {
-        e.preventDefault();
-      }
-      // Disable Ctrl+Shift+J
-      if (e.ctrlKey && e.shiftKey && e.key === "J") {
-        e.preventDefault();
-      }
-      // Disable Ctrl+U (view source)
-      if (e.ctrlKey && e.key === "U") {
-        e.preventDefault();
-      }
-    });
-  }, []);
+//     // Disable F12
+//     document.addEventListener("keydown", (e) => {
+//       if (e.key === "F12") {
+//         e.preventDefault();
+//       }
+//       // Disable Ctrl+Shift+I
+//       if (e.ctrlKey && e.shiftKey && e.key === "I") {
+//         e.preventDefault();
+//       }
+//       // Disable Ctrl+Shift+J
+//       if (e.ctrlKey && e.shiftKey && e.key === "J") {
+//         e.preventDefault();
+//       }
+//       // Disable Ctrl+U (view source)
+//       if (e.ctrlKey && e.key === "U") {
+//         e.preventDefault();
+//       }
+//     });
+//   }, []);
 
   useEffect(() => {
     const cursor = document.getElementById("cursor");
@@ -221,21 +219,12 @@ const App = () => {
           <div className="main-content">
             <Hero />
             <ShowcaseSection />
-            {/* First Marquee */}
-            {/* <ScrollMarquee
-              text="GS Bishwasa GS Bishwasa GS Bishwasa"
-              speed={0.2}
-              fontSize="clamp(4rem, 10vw, 8rem)"
-              height="100vh"
-            /> */}
             <ScrollMarqueeAnother />
             {/* <LogoSection /> */}
             <FeatureCards />
             <ExperienceSection />
-
             <ThingsGoodAt />
             <Contact />
-            {/* <ZoomSection /> */}
 
             <Footer />
           </div>

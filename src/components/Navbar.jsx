@@ -38,7 +38,7 @@ const Navbar = () => {
 
                 <a href="#" className='contact-btn group'>
                     <div className="inner">
-                        <span>get my resume offline</span>
+                        <span>My Resume</span>
                     </div>
                 </a>
                 {/* <Button className="md:w-60 md:h-16 w-60 h-12" id='button' text='get my resume ' /> */}

@@ -126,7 +126,8 @@ Get in Touch – <span className="text-[#F6BA53]">Let’s</span> Connect
           {isDesktop && (
             <div className="xl:col-span-7 min-h-96">
               <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-                <ContactExperience />
+                {/* <ContactExperience /> */}
+                <img className="h-full w-full" src="/images/computer.png" alt="" />
               </div>
             </div>
           )}
