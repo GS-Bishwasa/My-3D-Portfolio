@@ -7,7 +7,6 @@ import Navbar from './components/Navbar';
 import LogoSection from './sections/LogoSection';
 import FeatureCards from './sections/FeatureCards';
 import ExperienceSection from './sections/ExperienceSection';
-import TechStack from './sections/TechStack';
 import Contact from './sections/Contact';
 import ScrollMarquee from './components/ScrollMarquee';
 import ZoomSection from './sections/ZoomSection';
@@ -233,7 +232,7 @@ const App = () => {
             {/* <LogoSection /> */}
             <FeatureCards />
             <ExperienceSection />
-            <TechStack />
+
             <ThingsGoodAt />
             <Contact />
             {/* <ZoomSection /> */}
